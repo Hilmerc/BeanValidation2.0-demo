@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Bean Validation 2.0</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText value="Medellin JUG - Bean Validation 2.0 Demo" styleClass="panel-title"/>
+        <h:panelGrid columns="3" border="1" styleClass="panel panel-info ">
+            <h:outputLabel for="name" value="Name: " styleClass="col-sm-2 control-label"/>
+            <h:inputText id="name"  value="#{service.player.name}" styleClass="form-control"/>
+            <h:message for="name" styleClass="help-block"/>
+
+            <h:outputLabel for="email" value="E-mail: " styleClass="col-sm-2 control-label"/>
+            <h:inputText id="email"  value="#{service.player.email}" styleClass="form-control"/>
+            <h:message for="email" styleClass="help-block"/>
+
+
+
+        </h:panelGrid>
+        <h:commandButton value="Submit" action="#{service.addPlayer()}" styleClass="btn btn-primary"
+        />
+    </h:form>
+</h:body>
+</html>

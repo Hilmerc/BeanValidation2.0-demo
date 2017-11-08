@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Bean Validation 2.0</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputText value="Medellin JUG - Bean Validation 2.0 Demo" styleClass="panel-title"/>
+        <h:messages> </h:messages>
+        <h:panelGrid columns="2" border="1" styleClass="panel panel-info ">
+            <h:outputText value="Name: " styleClass="col-sm-2 control-label"/>
+            <h:outputText value="#{service.player.name}" styleClass="form-control-plaintext"/>
+
+
+            <h:outputText value="E-mail: " styleClass="col-sm-2 control-label"/>
+            <h:outputText value="#{service.player.email}" styleClass="form-control-plaintext"/>
+
+
+
+
+        </h:panelGrid>
+        <h:commandButton value="New Player" action="#{service.goBackPlayer()}" styleClass="btn btn-primary"
+        />
+    </h:form>
+</h:body>
+</html>
