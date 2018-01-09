@@ -1,0 +1,15 @@
+Index: src/test/java/org/medellinjug/demos/beanvalidation/ValidationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/org/medellinjug/demos/beanvalidation/ValidationTest.java	(revision 56ab8bb40fa575377d184646e566d28e744c2151)
++++ src/test/java/org/medellinjug/demos/beanvalidation/ValidationTest.java	(revision )
+@@ -15,7 +15,6 @@
+  * make sure that validation is performed correctly.
+  *
+  * @author Hillmer Chona
+- * @since 6.0.8
+  */
+ 
+ public class ValidationTest {
