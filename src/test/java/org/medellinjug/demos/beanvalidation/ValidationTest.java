@@ -11,10 +11,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * A set of tests for {@link Player}, which
- * make sure that validation is performed correctly.
+ * A set of tests for {@link Player}, which make sure that validation is performed correctly.
  *
- * @author Hillmer Chona
  * @since 6.0.8
  */
 
