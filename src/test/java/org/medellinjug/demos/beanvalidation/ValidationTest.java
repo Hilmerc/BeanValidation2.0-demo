@@ -13,7 +13,6 @@ import java.util.Set;
 public class ValidationTest {
 
 
-
     @Test
     public void fullWrongValidation() {
         /*All properties have wrong values*/
@@ -24,7 +23,7 @@ public class ValidationTest {
         player.setHobiess(null);
         player.setPassport("12345");
 
-        this.validation( player, NationalPlayer.class );
+        this.validation(player, NationalPlayer.class);
 
     }
 
@@ -36,10 +35,10 @@ public class ValidationTest {
         player.setName("Hillmer Chona");
         player.setEmail("invalid mail@gmail.com");
         player.setContractDate(LocalDate.of(2016, 1, 23));
-        player.setHobiess(List.of("Baseball","Hiking"));
+        player.setHobiess(List.of("Baseball", "Hiking"));
         player.setPassport("123456789012345");
 
-        this.validation( player, NationalPlayer.class );
+        this.validation(player, NationalPlayer.class);
 
 
     }
@@ -51,10 +50,10 @@ public class ValidationTest {
         player.setName("Hillmer Chona");
         player.setEmail("my-mail@gmail.com");
         player.setContractDate(LocalDate.of(2016, 1, 23));
-        player.setHobiess(List.of("Baseball","Hiking"));
+        player.setHobiess(List.of("Baseball", "Hiking"));
         player.setPassport("1234567890");
 
-        this.validation( player, NationalPlayer.class );
+        this.validation(player, NationalPlayer.class);
 
     }
 
@@ -65,23 +64,23 @@ public class ValidationTest {
         player.setName("Hillmer Chona");
         player.setEmail("my-mail@gmail.com");
         player.setContractDate(LocalDate.of(2016, 1, 23));
-        player.setHobiess(List.of("Baseball","Hiking"));
+        player.setHobiess(List.of("Baseball", "Hiking"));
         player.setPassport("123456789012345");
 
-        this.validation( player, NationalPlayer.class );
+        this.validation(player, NationalPlayer.class);
 
     }
 
     private void validation(Player player, Class cl) {
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
-        Set<ConstraintViolation<Player>> violationsGeneral = validator.validate( player );
+        Set<ConstraintViolation<Player>> violationsGeneral = validator.validate(player);
 
-        for ( ConstraintViolation<Player> constraintViolation : violationsGeneral ) {
-            System.out.println( "=======" );
-            System.out.println( "Message: " + constraintViolation.getMessage() );
-            System.out.println( "Property path: " + constraintViolation.getPropertyPath() );
-            System.out.println( "Annotation: " + constraintViolation.getConstraintDescriptor().getAnnotation().annotationType() );
+        for (ConstraintViolation<Player> constraintViolation : violationsGeneral) {
+            System.out.println("=======");
+            System.out.println("Message: " + constraintViolation.getMessage());
+            System.out.println("Property path: " + constraintViolation.getPropertyPath());
+            System.out.println("Annotation: " + constraintViolation.getConstraintDescriptor().getAnnotation().annotationType());
         }
 
         Set<ConstraintViolation<Player>> violationsByClass = validator.validate(player, cl);

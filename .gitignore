@@ -1,0 +1,16 @@
+# Build output directories
+target/
+build/
+bin/
+# IntelliJ specific files/directories
+out/
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+# Miscellaneous
+*.log
+.clover
+.DS_Store
+*.class

@@ -20,34 +20,20 @@ public class Service {
 
     private Player player = new Player();
 
-    public String addPlayer(){
-
-        try{
-
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"Submit OK: " + this.player, "Submit OK "
+    public String addPlayer() {
+        try {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Submit OK: " + this.player, "Submit OK "
                     + this.player));
-
             return "result";
-
-        }catch(Exception e){
+        } catch (Exception e) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), e.getMessage()));
         }
-
         return null;
-
-
     }
 
-    public String goBackPlayer(){
-
-      this.player = new Player();
-
+    public String goBackPlayer() {
+        this.player = new Player();
         return "player";
-
-
     }
-
-
-
 
 }
